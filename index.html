@@ -14,7 +14,14 @@
       line-height: 1.6;
     }
     
-    header, footer { 
+    header { 
+      background: #004466; 
+      color: white; 
+      text-align: center; 
+      padding: 2em 1em; 
+    }
+    
+    footer { 
       background: #004466; 
       color: white; 
       text-align: center; 
@@ -42,7 +49,6 @@
       color: #FFA500;
     }
     
-    /* New Banner Styles */
     .banner {
       background: linear-gradient(rgba(0,68,102,0.8), rgba(0,68,102,0.8)), 
                   url('https://images.unsplash.com/photo-1483721310020-03333e577078') no-repeat center center/cover;
@@ -63,13 +69,13 @@
     
     .banner h2 {
       color: white;
-      font-size: 2.8em;
+      font-size: 2.2em;
       margin-bottom: 0.5em;
       text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
     }
     
     .banner p {
-      font-size: 1.3em;
+      font-size: 1.1em;
       margin-bottom: 1.5em;
       text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
     }
@@ -81,22 +87,25 @@
     }
     
     h1, h2 { 
-      color: #004466; 
+      color: white; 
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
     }
     
     h1 {
-      font-size: 2.5em;
-      margin-bottom: 0.5em;
+      font-size: 3em;
+      margin-bottom: 0.3em;
     }
     
     h2 {
-      font-size: 2em;
-      margin-bottom: 1em;
+      font-size: 2.2em;
+      margin-bottom: 0.8em;
       text-align: center;
+      color: #004466;
     }
     
     h3 {
       color: #006680;
+      font-size: 1.4em;
     }
     
     ul { 
@@ -126,13 +135,20 @@
     
     .logo-text h1 {
       margin: 0; 
-      font-size: 2em;
+      font-size: 2.5em;
       line-height: 1;
+      color: white;
     }
     
     .logo-text p {
       margin: 0;
-      font-size: 1em;
+      font-size: 1.1em;
+      color: white;
+    }
+    
+    header > p {
+      color: #FFA500;
+      font-weight: 600;
     }
     
     .services-grid {
@@ -156,7 +172,7 @@
     }
     
     .service-icon {
-      height: 80px;
+      height: 90px;
       margin-bottom: 1em;
     }
     
@@ -249,11 +265,19 @@
       }
       
       .banner h2 {
-        font-size: 2.2em;
+        font-size: 1.8em;
       }
       
       .banner p {
-        font-size: 1.1em;
+        font-size: 1em;
+      }
+      
+      h1 {
+        font-size: 2.2em;
+      }
+      
+      h2 {
+        font-size: 1.8em;
       }
       
       .logo-container {
@@ -300,7 +324,7 @@
   <h2>Our Services</h2>
   <div class="services-grid">
     <div class="service-card">
-      <img src="https://cdn-icons-png.flaticon.com/512/2972/2972035.png" alt="Transport" class="service-icon">
+      <img src="https://cdn-icons-png.flaticon.com/512/263/263115.png" alt="Goods Transport" class="service-icon">
       <h3>Light Goods Transportation</h3>
       <p>UAE-wide delivery solutions with our modern fleet of vehicles</p>
     </div>
@@ -310,7 +334,7 @@
       <p>Flexible scheduling to meet your business needs</p>
     </div>
     <div class="service-card">
-      <img src="https://cdn-icons-png.flaticon.com/512/3448/3448570.png" alt="Bus" class="service-icon">
+      <img src="https://cdn-icons-png.flaticon.com/512/2762/2762874.png" alt="Staff Transport" class="service-icon">
       <h3>Staff Transport</h3>
       <p>Safe and comfortable employee transportation</p>
     </div>
