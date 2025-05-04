@@ -1,386 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>Odyssey Transport & Delivery Services</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta name="description" content="Odyssey - Reliable, professional, and efficient transport and delivery services in Abu Dhabi.">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
   <style>
-    body { 
-      margin: 0; 
-      font-family: 'Poppins', sans-serif; 
-      background: #f4f4f4; 
-      color: #333; 
-      line-height: 1.6;
+    body {
+      scroll-behavior: smooth;
     }
-    
-    header { 
-      background: #004466; 
-      color: white; 
-      text-align: center; 
-      padding: 2em 1em; 
-    }
-    
-    footer { 
-      background: #004466; 
-      color: white; 
-      text-align: center; 
-      padding: 2em 1em; 
-    }
-    
-    nav { 
-      background: #006680; 
-      text-align: center; 
-      padding: 1em; 
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-    
-    nav a { 
-      color: white; 
-      margin: 0 15px; 
-      text-decoration: none; 
-      font-weight: bold;
-      transition: color 0.3s;
-    }
-    
-    nav a:hover {
-      color: #FFA500;
-    }
-    
-    .banner {
-      background: linear-gradient(rgba(0,68,102,0.8), rgba(0,68,102,0.8)), 
-                  url('https://images.unsplash.com/photo-1483721310020-03333e577078') no-repeat center center/cover;
-      height: 500px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
+    .hero {
+      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                  url('https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?fit=crop&w=1400&q=80') center center/cover no-repeat;
       color: white;
-      position: relative;
-    }
-    
-    .banner-content {
-      max-width: 800px;
-      padding: 2em;
-      animation: fadeIn 1.5s ease;
-    }
-    
-    .banner h2 {
-      color: white;
-      font-size: 2.2em;
-      margin-bottom: 0.5em;
-      text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
-    }
-    
-    .banner p {
-      font-size: 1.1em;
-      margin-bottom: 1.5em;
-      text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
-    }
-    
-    section { 
-      padding: 3em 2em; 
-      max-width: 1000px; 
-      margin: auto; 
-    }
-    
-    h1, h2 { 
-      color: white; 
-      text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
-    }
-    
-    h1 {
-      font-size: 3em;
-      margin-bottom: 0.3em;
-    }
-    
-    h2 {
-      font-size: 2.2em;
-      margin-bottom: 0.8em;
-      text-align: center;
-      color: #004466;
-    }
-    
-    h3 {
-      color: #006680;
-      font-size: 1.4em;
-    }
-    
-    ul { 
-      padding-left: 20px; 
-    }
-    
-    footer p { 
-      font-size: 0.9em; 
-    }
-    
-    .logo-container {
-      display: flex; 
-      align-items: center; 
-      justify-content: center; 
-      gap: 15px;
-      margin-bottom: 1em;
-    }
-    
-    .logo-icon {
-      font-size: 3em; 
-      color: #FFA500;
-    }
-    
-    .logo-text {
-      text-align: left;
-    }
-    
-    .logo-text h1 {
-      margin: 0; 
-      font-size: 2.5em;
-      line-height: 1;
-      color: white;
-    }
-    
-    .logo-text p {
-      margin: 0;
-      font-size: 1.1em;
-      color: white;
-    }
-    
-    header > p {
-      color: #FFA500;
-      font-weight: 600;
-    }
-    
-    .services-grid {
-      display: grid; 
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
-      gap: 2em;
-      margin-top: 2em;
-    }
-    
-    .service-card {
-      background: white;
-      padding: 1.5em;
-      border-radius: 8px;
-      box-shadow: 0 2px 15px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease;
+      padding: 100px 0;
       text-align: center;
     }
-    
-    .service-card:hover {
-      transform: translateY(-5px);
+    .back-to-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: none;
+      z-index: 999;
     }
-    
-    .service-icon {
-      height: 90px;
-      margin-bottom: 1em;
-    }
-    
-    .why-grid {
-      display: grid; 
-      grid-template-columns: 1fr 1fr; 
-      gap: 2em;
-      margin-top: 2em;
-    }
-    
-    .why-card {
-      background: white;
-      padding: 1.5em;
-      border-radius: 8px;
-      box-shadow: 0 2px 15px rgba(0,0,0,0.1);
-      text-align: center;
-    }
-    
-    .why-card img {
-      width: 100%;
-      border-radius: 5px;
-      margin-bottom: 1em;
-      height: 200px;
-      object-fit: cover;
-    }
-    
-    .why-card h3 {
-      font-weight: normal;
-      color: #004466;
-      margin: 0.5em 0;
-      font-size: 1.3em;
-    }
-    
-    .why-card p {
-      font-weight: bold;
-      color: #333;
-      margin: 0;
-      font-size: 0.95em;
-    }
-    
-    .contact-info {
-      background: white;
-      padding: 2em;
-      border-radius: 8px;
-      box-shadow: 0 2px 15px rgba(0,0,0,0.1);
-      max-width: 600px;
-      margin: 0 auto;
-    }
-    
-    .contact-info p {
-      margin-bottom: 1em;
-    }
-    
-    img {
-      max-width: 100%;
-      height: auto;
-    }
-    
-    .btn {
-      display: inline-block;
-      background: #FFA500;
+    footer {
+      background-color: #343a40;
       color: white;
-      padding: 12px 30px;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: bold;
-      margin-top: 1em;
-      transition: all 0.3s;
-      font-size: 1.1em;
+      padding: 40px 0;
     }
-    
-    .btn:hover {
-      background: #e69500;
-      transform: translateY(-3px);
-      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    }
-    
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    
-    @media (max-width: 768px) {
-      .why-grid {
-        grid-template-columns: 1fr;
-      }
-      
-      .banner {
-        height: 400px;
-      }
-      
-      .banner h2 {
-        font-size: 1.8em;
-      }
-      
-      .banner p {
-        font-size: 1em;
-      }
-      
-      h1 {
-        font-size: 2.2em;
-      }
-      
-      h2 {
-        font-size: 1.8em;
-      }
-      
-      .logo-container {
-        flex-direction: column;
-        text-align: center;
-      }
+    .team img {
+      border-radius: 10px;
     }
   </style>
 </head>
 <body>
 
-<header>
-  <div class="logo-container">
-    <div class="logo-icon">➤</div>
-    <div class="logo-text">
-      <h1>ODYSSEY</h1>
-      <p>TRANSPORT & DELIVERY</p>
-    </div>
+<!-- Hero Section with Delivery Vans Fleet -->
+<section class="hero">
+  <div class="container">
+    <h1 class="display-4 fw-bold">Odyssey Transport & Delivery Services</h1>
+    <p class="lead">Efficient. Reliable. On Time – Every Time.</p>
+    <a href="#services" class="btn btn-warning btn-lg mt-4">Our Services</a>
   </div>
-  <p>Reliable. Affordable. On Time.</p>
-</header>
-
-<nav>
-  <a href="#about">About</a>
-  <a href="#services">Services</a>
-  <a href="#why">Why Us</a>
-  <a href="#contact">Contact</a>
-</nav>
-
-<div class="banner">
-  <div class="banner-content">
-    <h2>Premium Transport Solutions Across UAE</h2>
-    <p>Reliable goods delivery and passenger transport services in Abu Dhabi and beyond</p>
-    <a href="#contact" class="btn">Get Your Free Quote Today</a>
-  </div>
-</div>
-
-<section id="about">
-  <h2>About Us</h2>
-  <p>We are a licensed logistics provider based in Abu Dhabi, UAE. Odyssey is specialized in the transporting of passengers and Goods, pick-up & delivery of goods across the UAE. We provide fast, secure, and affordable logistics services to both individuals and businesses.</p>
 </section>
 
-<section id="services">
-  <h2>Our Services</h2>
-  <div class="services-grid">
-    <div class="service-card">
-      <img src="https://cdn-icons-png.flaticon.com/512/263/263115.png" alt="Goods Transport" class="service-icon">
-      <h3>Light Goods Transportation</h3>
-      <p>UAE-wide delivery solutions with our modern fleet of vehicles</p>
-    </div>
-    <div class="service-card">
-      <img src="https://cdn-icons-png.flaticon.com/512/3448/3448597.png" alt="Schedule" class="service-icon">
-      <h3>Delivery Coordination</h3>
-      <p>Flexible scheduling to meet your business needs</p>
-    </div>
-    <div class="service-card">
-      <img src="https://cdn-icons-png.flaticon.com/512/2762/2762874.png" alt="Staff Transport" class="service-icon">
-      <h3>Staff Transport</h3>
-      <p>Safe and comfortable employee transportation</p>
+<!-- About Section -->
+<section id="about" class="py-5 bg-light">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <h2>Who We Are</h2>
+        <p>Odyssey Transport & Delivery Services is a trusted logistics company based in Abu Dhabi, dedicated to providing safe and timely transportation solutions. We serve businesses with a commitment to excellence and customer satisfaction.</p>
+      </div>
+      <div class="col-md-6">
+        <img src="https://images.unsplash.com/photo-1605902711622-cfb43c4437d5?fit=crop&w=800&q=80" alt="Logistics delivery van" class="img-fluid rounded">
+      </div>
     </div>
   </div>
 </section>
 
-<section id="why">
-  <h2>Why Choose Odyssey?</h2>
-  <div class="why-grid">
-    <div class="why-card">
-      <img src="https://images.unsplash.com/photo-1584433144859-1fc3ab64a957" alt="License">
-      <h3>Fully Licensed</h3>
-      <p>Certified UAE transport provider with all necessary permits and insurance coverage</p>
+<!-- Services Section -->
+<section id="services" class="py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2>Our Services</h2>
+      <p>Tailored transportation and logistics solutions</p>
     </div>
-    <div class="why-card">
-      <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf" alt="Professional Driver">
-      <h3>Professional Staff</h3>
-      <p>Our experienced, trained personnel ensure your goods and passengers arrive safely</p>
-    </div>
-    <div class="why-card">
-      <img src="https://images.unsplash.com/photo-1541899481282-d53bffe3c35d" alt="Modern Fleet">
-      <h3>Modern Fleet</h3>
-      <p>Well-maintained vehicles equipped for all your transport needs</p>
-    </div>
-    <div class="why-card">
-      <img src="https://images.unsplash.com/photo-1579389083078-4e7018379f7e" alt="Tracking">
-      <h3>Reliable Tracking</h3>
-      <p>Real-time updates so you always know your shipment status</p>
+    <div class="row text-center">
+      <div class="col-md-4">
+        <i class="fas fa-truck fa-3x text-primary mb-3"></i>
+        <h4>Goods Transport</h4>
+        <p>Efficient movement of goods across the UAE with a fleet of reliable vehicles.</p>
+      </div>
+      <div class="col-md-4">
+        <i class="fas fa-clipboard-list fa-3x text-success mb-3"></i>
+        <h4>Delivery Coordination</h4>
+        <p>Expert coordination to ensure timely deliveries and satisfied customers.</p>
+      </div>
+      <div class="col-md-4">
+        <i class="fas fa-headset fa-3x text-warning mb-3"></i>
+        <h4>Customer Support</h4>
+        <p>24/7 support team ready to help you with your logistics needs.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<section id="contact">
-  <h2>Contact Us</h2>
-  <div class="contact-info">
-    <p><strong>Email:</strong> info@odysseytransport.me</p>
-    <p><strong>Phone:</strong> +971 58 8924788 / +971 50 4284721</p>
-    <p><strong>Location:</strong> Mussafah Industrial Area, Abu Dhabi, UAE</p>
-    <p><strong>Hours:</strong> Sunday - Thursday, 8:00 AM - 6:00 PM</p>
-    <a href="mailto:info@odysseytransport.me" class="btn">Send Us an Email</a>
+<!-- Team Section -->
+<section id="team" class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2>Our Professional Team</h2>
+      <p>Experienced and dedicated drivers and coordinators</p>
+    </div>
+    <div class="row text-center">
+      <div class="col-md-4">
+        <img src="https://images.unsplash.com/photo-1581091012184-7a3c4d9c7b96?fit=crop&w=600&q=80" alt="Driver 1" class="img-fluid mb-3" width="200">
+        <h5>Mohamed Ali</h5>
+        <p>Senior Delivery Driver</p>
+      </div>
+      <div class="col-md-4">
+        <img src="https://images.unsplash.com/photo-1610641812688-0b2e3c3c75d3?fit=crop&w=600&q=80" alt="Driver 2" class="img-fluid mb-3" width="200">
+        <h5>Fatima Noor</h5>
+        <p>Logistics Coordinator</p>
+      </div>
+      <div class="col-md-4">
+        <img src="https://images.unsplash.com/photo-1622622014564-7b04e0a2f514?fit=crop&w=600&q=80" alt="Driver 3" class="img-fluid mb-3" width="200">
+        <h5>Rashid Khan</h5>
+        <p>Fleet Supervisor</p>
+      </div>
+    </div>
   </div>
 </section>
 
-<footer>
-  <p>&copy; 2025 Odyssey Transport & Delivery Services. All rights reserved.</p>
+<!-- Contact Section -->
+<section id="contact" class="py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2>Contact Us</h2>
+      <p>Let's move your business forward together</p>
+    </div>
+    <form class="row g-3">
+      <div class="col-md-6">
+        <input type="text" class="form-control" placeholder="Your Name" required>
+      </div>
+      <div class="col-md-6">
+        <input type="email" class="form-control" placeholder="Email Address" required>
+      </div>
+      <div class="col-12">
+        <textarea class="form-control" rows="4" placeholder="Your Message" required></textarea>
+      </div>
+      <div class="col-12 text-center">
+        <button type="submit" class="btn btn-primary px-5">Send Message</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="text-center">
+  <div class="container">
+    <p class="mb-2">© 2025 Odyssey Transport & Delivery Services. All rights reserved.</p>
+    <div>
+      <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+      <a href="#" class="text-white me-3"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+  </div>
 </footer>
 
+<!-- Back to Top Button -->
+<a href="#" class="btn btn-primary back-to-top"><i class="fas fa-arrow-up"></i></a>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // Show/hide back-to-top button
+  const backToTop = document.querySelector('.back-to-top');
+  window.addEventListener('scroll', () => {
+    backToTop.style.display = window.scrollY > 300 ? 'block' : 'none';
+  });
+</script>
 </body>
 </html>
