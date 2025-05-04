@@ -42,22 +42,36 @@
       color: #FFA500;
     }
     
-    .banner { 
-      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1601584115197-04ecc0da31d8') no-repeat center center / cover; 
-      height: 400px; 
-      display: flex; 
-      align-items: center; 
-      justify-content: center; 
+    /* New Banner Styles */
+    .banner {
+      background: linear-gradient(rgba(0,68,102,0.8), rgba(0,68,102,0.8)), 
+                  url('https://images.unsplash.com/photo-1483721310020-03333e577078') no-repeat center center/cover;
+      height: 500px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
       color: white;
-      text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+      position: relative;
     }
     
     .banner-content {
-      text-align: center; 
-      background: rgba(0,68,102,0.7); 
-      padding: 2em; 
-      border-radius: 5px;
       max-width: 800px;
+      padding: 2em;
+      animation: fadeIn 1.5s ease;
+    }
+    
+    .banner h2 {
+      color: white;
+      font-size: 2.8em;
+      margin-bottom: 0.5em;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+    }
+    
+    .banner p {
+      font-size: 1.3em;
+      margin-bottom: 1.5em;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
     }
     
     section { 
@@ -158,6 +172,7 @@
       padding: 1.5em;
       border-radius: 8px;
       box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+      text-align: center;
     }
     
     .why-card img {
@@ -166,6 +181,20 @@
       margin-bottom: 1em;
       height: 200px;
       object-fit: cover;
+    }
+    
+    .why-card h3 {
+      font-weight: normal;
+      color: #004466;
+      margin: 0.5em 0;
+      font-size: 1.3em;
+    }
+    
+    .why-card p {
+      font-weight: bold;
+      color: #333;
+      margin: 0;
+      font-size: 0.95em;
     }
     
     .contact-info {
@@ -190,16 +219,24 @@
       display: inline-block;
       background: #FFA500;
       color: white;
-      padding: 0.8em 1.5em;
-      border-radius: 5px;
+      padding: 12px 30px;
+      border-radius: 30px;
       text-decoration: none;
       font-weight: bold;
       margin-top: 1em;
-      transition: background 0.3s;
+      transition: all 0.3s;
+      font-size: 1.1em;
     }
     
     .btn:hover {
       background: #e69500;
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
     
     @media (max-width: 768px) {
@@ -208,7 +245,15 @@
       }
       
       .banner {
-        height: 300px;
+        height: 400px;
+      }
+      
+      .banner h2 {
+        font-size: 2.2em;
+      }
+      
+      .banner p {
+        font-size: 1.1em;
       }
       
       .logo-container {
@@ -240,9 +285,9 @@
 
 <div class="banner">
   <div class="banner-content">
-    <h2>Your Reliable Transport Partner</h2>
-    <p style="font-size: 1.2em;">Across Abu Dhabi and the UAE</p>
-    <a href="#contact" class="btn">Get a Free Quote</a>
+    <h2>Premium Transport Solutions Across UAE</h2>
+    <p>Reliable goods delivery and passenger transport services in Abu Dhabi and beyond</p>
+    <a href="#contact" class="btn">Get Your Free Quote Today</a>
   </div>
 </div>
 
@@ -272,82 +317,31 @@
   </div>
 </section>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <!-- [Keep all meta tags and title unchanged] -->
-  <style>
-    /* [Keep all existing CSS unchanged until .why-card] */
-    
-    .why-card {
-      background: white;
-      padding: 1.5em;
-      border-radius: 8px;
-      box-shadow: 0 2px 15px rgba(0,0,0,0.1);
-      text-align: center;
-    }
-    
-    .why-card img {
-      width: 100%;
-      border-radius: 5px;
-      margin-bottom: 1em;
-      height: 200px;
-      object-fit: cover;
-    }
-    
-    /* NEW CONSISTENT TEXT FORMATTING */
-    .why-card h3 {
-      font-weight: normal; /* Normal weight for titles */
-      color: #004466; /* Navy blue */
-      margin: 0.5em 0;
-      font-size: 1.3em;
-    }
-    
-    .why-card p {
-      font-weight: bold; /* Bold for descriptions */
-      color: #333; /* Dark gray */
-      margin: 0;
-      font-size: 0.95em;
-    }
-    
-    /* [Keep all remaining CSS unchanged] */
-  </style>
-</head>
-<body>
-
-  <!-- [Keep header, nav, banner, about, and services sections exactly as is] -->
-
-  <!-- Updated Why Choose Us Section with Consistent Formatting -->
-  <section id="why">
-    <h2>Why Choose Odyssey?</h2>
-    <div class="why-grid">
-      <div class="why-card">
-        <img src="https://images.unsplash.com/photo-1584433144859-1fc3ab64a957" alt="License">
-        <h3>Fully Licensed</h3>
-        <p>Certified UAE transport provider with all necessary permits and insurance coverage</p>
-      </div>
-      <div class="why-card">
-        <img src="https://images.unsplash.com/photo-1502919280275-2ff972a7e368" alt="Driver">
-        <h3>Professional Staff</h3>
-        <p>Our experienced, trained personnel ensure your goods and passengers arrive safely</p>
-      </div>
-      <div class="why-card">
-        <img src="https://images.unsplash.com/photo-1556740734-9f9ca6e37380" alt="Vehicles">
-        <h3>Modern Fleet</h3>
-        <p>Well-maintained vehicles equipped for all your transport needs</p>
-      </div>
-      <div class="why-card">
-        <img src="https://images.unsplash.com/photo-1579389083078-4e7018379f7e" alt="Tracking">
-        <h3>Reliable Tracking</h3>
-        <p>Real-time updates so you always know your shipment status</p>
-      </div>
+<section id="why">
+  <h2>Why Choose Odyssey?</h2>
+  <div class="why-grid">
+    <div class="why-card">
+      <img src="https://images.unsplash.com/photo-1584433144859-1fc3ab64a957" alt="License">
+      <h3>Fully Licensed</h3>
+      <p>Certified UAE transport provider with all necessary permits and insurance coverage</p>
     </div>
-  </section>
-
-  <!-- [Keep contact and footer sections exactly as is] -->
-
-</body>
-</html>
+    <div class="why-card">
+      <img src="https://images.unsplash.com/photo-1502919280275-2ff972a7e368" alt="Driver">
+      <h3>Professional Staff</h3>
+      <p>Our experienced, trained personnel ensure your goods and passengers arrive safely</p>
+    </div>
+    <div class="why-card">
+      <img src="https://images.unsplash.com/photo-1556740734-9f9ca6e37380" alt="Vehicles">
+      <h3>Modern Fleet</h3>
+      <p>Well-maintained vehicles equipped for all your transport needs</p>
+    </div>
+    <div class="why-card">
+      <img src="https://images.unsplash.com/photo-1579389083078-4e7018379f7e" alt="Tracking">
+      <h3>Reliable Tracking</h3>
+      <p>Real-time updates so you always know your shipment status</p>
+    </div>
+  </div>
+</section>
 
 <section id="contact">
   <h2>Contact Us</h2>
